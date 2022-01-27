@@ -1,0 +1,6 @@
+framework module advance_pdf_viewer {
+  umbrella header "advance_pdf_viewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
