@@ -12,8 +12,36 @@ class HomePage extends GetView<pdfController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            Container(
+              color: Colors.deepPurpleAccent,
+              child: const DrawerHeader(
+                  margin: EdgeInsets.all(0),
+                  child: Center(
+                    child: Text(
+                      'Flip Pages',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
+                  )),
+            ),
+            const ListTile(
+              leading: Icon(Icons.music_note),
+              title: Text('Music'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
-        title: const Text('Flip Pages'),
+        title: const Text('Music'),
         centerTitle: true,
         backgroundColor: Colors.deepPurpleAccent,
       ),

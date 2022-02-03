@@ -25,7 +25,8 @@ class pdfPage extends GetView<pdfController> {
             ? const Center(
                 child: Text('Select a song from the drawer'),
               )
-            : const PDF().fromAsset(controller.currentPath.value,
+            : const PDF(swipeHorizontal: true).fromAsset(
+                controller.currentPath.value,
                 loadingWidget: () => const CircularProgressIndicator()));
   }
 }
