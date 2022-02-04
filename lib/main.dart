@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/controllers/pdf_controller.dart';
+import 'package:my_app/controllers/files_controller.dart';
 import 'package:get/get.dart';
+import 'package:my_app/controllers/pdf_controller.dart';
 import 'package:my_app/views/home_page.dart';
 import 'package:my_app/widgets/pdf_page.dart';
 
@@ -9,7 +10,7 @@ import 'package:my_app/widgets/pdf_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Get.put(pdfController());
+  Get.put(FilesControler());
   runApp(const GetMaterialApp(
     home: HomePage(),
   ));
