@@ -1,10 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:get/get.dart';
-import 'package:my_app/controllers/pdf_controller.dart';
-import 'package:my_app/widgets/pdf_page.dart';
-import 'package:path/path.dart';
 
 class FilesControler extends GetxController {
   int numFiles = 0;

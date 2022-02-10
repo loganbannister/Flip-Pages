@@ -1,12 +1,10 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
-import 'package:my_app/controllers/files_controller.dart';
 import 'package:my_app/controllers/pdf_controller.dart';
 import 'package:path/path.dart';
 import 'package:get/get.dart';
 
+// ignore: camel_case_types
 class pdfPage extends StatelessWidget {
   final String path; //file path to pdf
   final String location; //assets or local storage
