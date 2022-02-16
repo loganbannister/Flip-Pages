@@ -67,7 +67,7 @@ class EyeTrackingcontroller extends GetxController {
       for (Face face in faces) {
 
         headRotation.value =
-            face.headEulerAngleY!;
+            face.headEulerAngleZ!;
 
         // If landmark detection was enabled with FaceDetectorOptions (mouth, ears,
         // eyes, cheeks, and nose available):
