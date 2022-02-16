@@ -13,10 +13,19 @@ class EyeTracking extends GetView<EyeTrackingcontroller> {
         title: const Text('Eye Tracking Prototype'),
         centerTitle: true,
       ),
-      body: Center(
-        child: CameraPreview(
-          controller.camera!,
-        ),
+      body: ListView(
+        children: [
+          CameraPreview(
+            controller.camera!,
+          ),
+          Obx(
+            () => Text('Head Rotation: ${controller.headRotation.value}'),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => controller.faceDetection(),
+        child: const Icon(Icons.face),
       ),
     );
   }
