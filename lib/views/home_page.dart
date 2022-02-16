@@ -1,13 +1,10 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/file.dart';
-import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
 import 'package:my_app/controllers/files_controller.dart';
 import 'package:my_app/controllers/pdf_controller.dart';
+import 'package:my_app/views/eye_tracking.dart';
 import 'package:my_app/widgets/pdf_page.dart';
 import 'package:path/path.dart';
 
@@ -42,6 +39,11 @@ class HomePage extends GetView<FilesControler> {
                 leading: Icon(Icons.settings),
                 title: Text('Settings'),
               ),
+              ListTile(
+                leading: const Icon(Icons.camera),
+                title: const Text('Eye Tracking Test'),
+                onTap: () => Get.to(() => const EyeTracking()),
+              )
             ],
           ),
         ),
