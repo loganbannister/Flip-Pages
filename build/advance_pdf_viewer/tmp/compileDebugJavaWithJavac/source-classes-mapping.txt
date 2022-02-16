@@ -1,8 +1,0 @@
-pt/tribeiro/flutter_plugin_pdf_viewer/BuildConfig.java
- pt.tribeiro.flutter_plugin_pdf_viewer.BuildConfig
-pt/tribeiro/flutter_plugin_pdf_viewer/FlutterPluginPdfViewerPlugin.java
- pt.tribeiro.flutter_plugin_pdf_viewer.FlutterPluginPdfViewerPlugin
- pt.tribeiro.flutter_plugin_pdf_viewer.FlutterPluginPdfViewerPlugin$1
- pt.tribeiro.flutter_plugin_pdf_viewer.FlutterPluginPdfViewerPlugin$1$1
- pt.tribeiro.flutter_plugin_pdf_viewer.FlutterPluginPdfViewerPlugin$1$2
- pt.tribeiro.flutter_plugin_pdf_viewer.FlutterPluginPdfViewerPlugin$2
