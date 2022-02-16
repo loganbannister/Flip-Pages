@@ -19,7 +19,7 @@ class EyeTracking extends GetView<EyeTrackingcontroller> {
             controller.camera!,
           ),
           Obx(
-            () => Text('Head Rotation: ${controller.headRotation.value}'),
+            () => Text('Head Rotation: ${controller.headRotation.value.toStringAsFixed(2)}'),
           ),
         ],
       ),

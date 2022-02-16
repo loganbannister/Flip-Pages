@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -58,24 +56,24 @@ class EyeTrackingcontroller extends GetxController {
 
       final inputImage =
           InputImage.fromBytes(bytes: bytes, inputImageData: inputImageData);
-      final faceDetector = GoogleMlKit.vision.faceDetector(const FaceDetectorOptions(
-          enableClassification: true,
-          enableLandmarks: true,
-          enableTracking: true));
+      final faceDetector = GoogleMlKit.vision.faceDetector(
+          const FaceDetectorOptions(
+              enableClassification: false,
+              enableLandmarks: false,
+              enableTracking: true));
       final List<Face> faces = await faceDetector.processImage(inputImage);
 
       for (Face face in faces) {
-
-        headRotation.value =
-            face.headEulerAngleZ!;
+        // headRotation.value = face.headEulerAngleY!;
+        print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
 
         // If landmark detection was enabled with FaceDetectorOptions (mouth, ears,
         // eyes, cheeks, and nose available):
-        final FaceLandmark? leftEye =
-            face.getLandmark(FaceLandmarkType.leftEye);
-        if (leftEye != null) {
-          leftEyePos.value = leftEye.position;
-        }
+        // final FaceLandmark? leftEye =
+        //     face.getLandmark(FaceLandmarkType.leftEye);
+        // if (leftEye != null) {
+        //   leftEyePos.value = leftEye.position;
+        // }
       }
     });
   }
