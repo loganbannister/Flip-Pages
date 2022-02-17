@@ -19,7 +19,7 @@ class HeadTrackingController extends GetxController {
   RxDouble headRotation = RxDouble(0);
 
   //TODO: Determine by testing which angle to turn the page at
-  //TODO: double turnPageAngle = ???;
+  double turnPageAngle = -70;
 
   // true if turn page condition is met
   RxBool turnPage = RxBool(false);
@@ -79,10 +79,11 @@ class HeadTrackingController extends GetxController {
 
       // Assumes only one face and prints tilt angle
       for (Face face in faces) {
-        //TODO: if(face.headEulerAngleZ! == turnPageAngle)
-        // {
-        //TODO:   turnPage = true;
-        // }
+        if (face.headEulerAngleZ! >= turnPageAngle) {
+          turnPage.value = true;
+        } else {
+          turnPage.value = false;
+        }
         print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
       }
     });
