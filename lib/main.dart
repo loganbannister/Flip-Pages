@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/controllers/eye_tracking_controller.dart';
+import 'package:my_app/controllers/head_tracking_controller.dart';
 import 'package:my_app/controllers/files_controller.dart';
 import 'package:get/get.dart';
 import 'package:my_app/views/home_page.dart';
@@ -10,12 +10,11 @@ import 'package:my_app/views/home_page.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Get.put(FilesControler());
-  Get.put(EyeTrackingcontroller());
+  Get.put(HeadTrackingController());
   runApp(GetMaterialApp(
     theme: ThemeData(
         primaryColor: Colors.deepPurpleAccent,
-        appBarTheme:
-            const AppBarTheme(backgroundColor: Colors.deepPurpleAccent)),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.deepPurpleAccent)),
     home: const HomePage(),
   ));
 }
