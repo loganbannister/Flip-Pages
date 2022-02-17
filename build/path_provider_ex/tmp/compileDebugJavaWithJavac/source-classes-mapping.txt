@@ -1,6 +1,0 @@
-com/amudanan/path_provider_ex/PathProviderExPlugin.java
- com.amudanan.path_provider_ex.PathProviderExPlugin
-com/amudanan/path_provider_ex/BuildConfig.java
- com.amudanan.path_provider_ex.BuildConfig
-com/amudanan/path_provider_ex/StorageUtils.java
- com.amudanan.path_provider_ex.StorageUtils

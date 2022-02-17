@@ -4,7 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
 import 'package:my_app/controllers/files_controller.dart';
 import 'package:my_app/controllers/pdf_controller.dart';
-import 'package:my_app/views/eye_tracking.dart';
+import 'package:my_app/views/head_tracking.dart';
 import 'package:my_app/widgets/pdf_page.dart';
 import 'package:path/path.dart';
 
@@ -42,7 +42,7 @@ class HomePage extends GetView<FilesControler> {
               ListTile(
                 leading: const Icon(Icons.camera),
                 title: const Text('Eye Tracking Test'),
-                onTap: () => Get.to(() => const EyeTracking()),
+                onTap: () => Get.to(() => const HeadTracking()),
               )
             ],
           ),
@@ -77,8 +77,7 @@ class HomePage extends GetView<FilesControler> {
             onTap: () {
               final String newPath = controller.filePaths[index];
               controller.currentPath.value = newPath;
-              Get.lazyPut(
-                  () => PDFController(path: controller.currentPath.value),
+              Get.lazyPut(() => PDFController(path: controller.currentPath.value),
                   tag: basenameWithoutExtension(controller.currentPath.value));
               Get.to(() => pdfPage(path: newPath, location: 'assets'));
             },
