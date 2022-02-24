@@ -23,7 +23,7 @@ class pdfPage extends StatelessWidget {
             title: Text(basenameWithoutExtension(path)),
             actions: [
               IconButton(
-                icon: const Icon(Icons.flip),
+                icon: const Icon(Icons.play_arrow),
                 onPressed: () => controller.turnPage(),
               ),
             ]),

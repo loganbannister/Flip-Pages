@@ -27,7 +27,7 @@ class HeadTrackingController extends GetxController {
   @override
   void onInit() async {
     await getPermission(); //check if permissions are accepted
-    initCamera(); //initialize camera
+    //initCamera(); //initialize camera
     super.onInit();
   }
 
