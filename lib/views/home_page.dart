@@ -77,7 +77,8 @@ class HomePage extends GetView<FilesControler> {
             onTap: () {
               final String newPath = controller.filePaths[index];
               controller.currentPath.value = newPath;
-              Get.lazyPut(() => PDFController(path: controller.currentPath.value),
+              Get.lazyPut(
+                  () => PDFController(path: controller.currentPath.value),
                   tag: basenameWithoutExtension(controller.currentPath.value));
               Get.to(() => pdfPage(path: newPath, location: 'assets'));
             },

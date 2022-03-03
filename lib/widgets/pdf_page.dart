@@ -24,12 +24,14 @@ class pdfPage extends StatelessWidget {
           backgroundColor: Colors.deepPurpleAccent,
           title: Text(basenameWithoutExtension(path)),
           actions: [
-            IconButton(
-              icon: headTrackingController.streamRunning.value
-                  ? const Icon(Icons.pause)
-                  : const Icon(Icons.play_arrow),
-              onPressed: () => headTrackingController.toggleStream(),
-            ),
+            Obx(() {
+              return IconButton(
+                icon: headTrackingController.streamRunning.value
+                    ? const Icon(Icons.pause)
+                    : const Icon(Icons.play_arrow),
+                onPressed: () => headTrackingController.toggleStream(),
+              );
+            }),
           ]),
       body: Obx(() {
         if (headTrackingController.turnPage.value) {
