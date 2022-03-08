@@ -19,7 +19,6 @@ class FilesControler extends GetxController {
   void loadFiles() {
     //TODO: Load other files
     filePaths.add('assets/Fr_Elise.pdf');
-
     filePaths.add('assets/Canon_in_D.pdf');
     filePaths.add('assets/Carol_of_the_Bells.pdf');
   }
