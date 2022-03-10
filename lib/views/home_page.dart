@@ -5,6 +5,7 @@ import 'package:get/state_manager.dart';
 import 'package:my_app/controllers/files_controller.dart';
 import 'package:my_app/controllers/pdf_controller.dart';
 import 'package:my_app/views/head_tracking.dart';
+import 'package:my_app/views/tutorial.dart';
 import 'package:my_app/widgets/pdf_page.dart';
 import 'package:path/path.dart';
 
@@ -43,6 +44,11 @@ class HomePage extends GetView<FilesControler> {
                 leading: const Icon(Icons.camera),
                 title: const Text('Eye Tracking Test'),
                 onTap: () => Get.to(() => const HeadTracking()),
+              ),
+              ListTile(
+                leading: Icon(Icons.help),
+                title: Text('Tutorial'),
+                onTap: () => Get.to(() => const Tutorial())
               )
             ],
           ),
