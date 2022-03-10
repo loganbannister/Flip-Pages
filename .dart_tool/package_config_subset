@@ -211,9 +211,9 @@ sqflite
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.2/
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.2/lib/
 sqflite_common
-2.12
-file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.0.1+1/
-file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.0.1+1/lib/
+2.15
+file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.2.0/
+file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.2.0/lib/
 stack_trace
 2.12
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.10.0/
@@ -255,9 +255,9 @@ vector_math
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/lib/
 win32
-2.14
-file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.6/
-file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.6/lib/
+2.15
+file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8/
+file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8/lib/
 xdg_directories
 2.12
 file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0/

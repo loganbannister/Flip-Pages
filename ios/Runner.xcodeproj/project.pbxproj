@@ -386,11 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.team10.flipPages;
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.wowoowowow;
->>>>>>> origin/tutorial
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -546,11 +542,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.team10.flipPages;
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.wowoowowow;
->>>>>>> origin/tutorial
+				PRODUCT_BUNDLE_IDENTIFIER = com.team10.flipPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

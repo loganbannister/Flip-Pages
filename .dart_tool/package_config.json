@@ -345,7 +345,7 @@
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.0.1+1",
+      "rootUri": "file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -411,7 +411,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.6",
+      "rootUri": "file:///home/hydraux/.pub-cache/hosted/pub.dartlang.org/win32-2.3.8",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },

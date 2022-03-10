@@ -10,15 +10,7 @@
 **/.vagrant/
 **/DerivedData/
 Icon?
-<<<<<<< HEAD
-#**/Pods/
-=======
-<<<<<<< HEAD
 Pods/
-=======
-#**/Pods/
->>>>>>> ce10e0a8faf44fcc60dbeeb23e843dbf3f39948a
->>>>>>> origin/tutorial
 **/.symlinks/
 profile
 xcuserdata
