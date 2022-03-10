@@ -1,7 +1,7 @@
+import 'package:flip_pages/controllers/head_tracking_controller.dart';
+import 'package:flip_pages/controllers/pdf_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
-import 'package:my_app/controllers/head_tracking_controller.dart';
-import 'package:my_app/controllers/pdf_controller.dart';
 import 'package:path/path.dart';
 import 'package:get/get.dart';
 

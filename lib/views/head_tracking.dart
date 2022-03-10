@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
+import 'package:flip_pages/controllers/head_tracking_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
-import 'package:my_app/controllers/head_tracking_controller.dart';
 
 class HeadTracking extends GetView<HeadTrackingController> {
   const HeadTracking({Key? key}) : super(key: key);
