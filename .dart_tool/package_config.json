@@ -422,13 +422,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "my_app",
+      "name": "flip_pages",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-03-03T21:46:36.369712Z",
+  "generated": "2022-03-03T21:47:18.526773Z",
   "generator": "pub",
   "generatorVersion": "2.16.1"
 }

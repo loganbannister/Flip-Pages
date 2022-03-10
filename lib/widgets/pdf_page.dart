@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
+import 'package:my_app/controllers/head_tracking_controller.dart';
 import 'package:my_app/controllers/pdf_controller.dart';
 import 'package:path/path.dart';
 import 'package:get/get.dart';
@@ -14,20 +15,30 @@ class pdfPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HeadTrackingController headTrackingController = Get.find();
     final PDFController controller =
         Get.find<PDFController>(tag: basenameWithoutExtension(path));
     return Scaffold(
-        appBar: AppBar(
-            centerTitle: true,
-            backgroundColor: Colors.deepPurpleAccent,
-            title: Text(basenameWithoutExtension(path)),
-            actions: [
-              IconButton(
-                icon: const Icon(Icons.flip),
-                onPressed: () => controller.turnPage(),
-              ),
-            ]),
-        body: controller.path == 'home'
+      appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.deepPurpleAccent,
+          title: Text(basenameWithoutExtension(path)),
+          actions: [
+            Obx(() {
+              return IconButton(
+                icon: headTrackingController.streamRunning.value
+                    ? const Icon(Icons.pause)
+                    : const Icon(Icons.play_arrow),
+                onPressed: () => headTrackingController.toggleStream(),
+              );
+            }),
+          ]),
+      body: Obx(() {
+        if (headTrackingController.turnPage.value) {
+          controller.turnPage();
+          headTrackingController.turnPage.value == false;
+        }
+        return controller.path == 'home'
             ? const Center(
                 child: Text('Select a song from the drawer'),
               )
@@ -37,6 +48,8 @@ class pdfPage extends StatelessWidget {
                   controller.viewController = viewController;
                   controller.pdfViewController
                       .complete(controller.viewController);
-                }).fromAsset(controller.path));
+                }).fromAsset(controller.path);
+      }),
+    );
   }
 }
