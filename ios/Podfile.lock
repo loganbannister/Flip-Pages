@@ -37,15 +37,15 @@ PODS:
   - file_picker (0.0.1):
     - DKImagePickerController/PhotoGallery
     - Flutter
-  - Firebase (8.12.1):
-    - Firebase/Core (= 8.12.1)
-  - Firebase/Core (8.12.1):
+  - Firebase (8.14.0):
+    - Firebase/Core (= 8.14.0)
+  - Firebase/Core (8.14.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (~> 8.12.0)
-  - Firebase/CoreOnly (8.12.1):
-    - FirebaseCore (= 8.12.1)
-  - FirebaseAnalytics (8.12.0):
-    - FirebaseAnalytics/AdIdSupport (= 8.12.0)
+    - FirebaseAnalytics (~> 8.14.0)
+  - Firebase/CoreOnly (8.14.0):
+    - FirebaseCore (= 8.14.0)
+  - FirebaseAnalytics (8.14.0):
+    - FirebaseAnalytics/AdIdSupport (= 8.14.0)
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -53,25 +53,25 @@ PODS:
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (~> 2.30908.0)
-  - FirebaseAnalytics/AdIdSupport (8.12.0):
+  - FirebaseAnalytics/AdIdSupport (8.14.0):
     - FirebaseCore (~> 8.0)
     - FirebaseInstallations (~> 8.0)
-    - GoogleAppMeasurement (= 8.12.0)
+    - GoogleAppMeasurement (= 8.14.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (~> 2.30908.0)
-  - FirebaseCore (8.12.1):
+  - FirebaseCore (8.14.0):
     - FirebaseCoreDiagnostics (~> 8.0)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
-  - FirebaseCoreDiagnostics (8.12.0):
+  - FirebaseCoreDiagnostics (8.14.0):
     - GoogleDataTransport (~> 9.1)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
     - nanopb (~> 2.30908.0)
-  - FirebaseInstallations (8.12.0):
+  - FirebaseInstallations (8.14.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/UserDefaults (~> 7.7)
@@ -94,21 +94,21 @@ PODS:
     - GoogleMLKit/PoseDetection (~> 2.2.0)
     - GoogleMLKit/PoseDetectionAccurate (~> 2.2.0)
     - GoogleMLKit/TextRecognition (~> 2.2.0)
-  - GoogleAppMeasurement (8.12.0):
-    - GoogleAppMeasurement/AdIdSupport (= 8.12.0)
+  - GoogleAppMeasurement (8.14.0):
+    - GoogleAppMeasurement/AdIdSupport (= 8.14.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (~> 2.30908.0)
-  - GoogleAppMeasurement/AdIdSupport (8.12.0):
-    - GoogleAppMeasurement/WithoutAdIdSupport (= 8.12.0)
+  - GoogleAppMeasurement/AdIdSupport (8.14.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 8.14.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
     - nanopb (~> 2.30908.0)
-  - GoogleAppMeasurement/WithoutAdIdSupport (8.12.0):
+  - GoogleAppMeasurement/WithoutAdIdSupport (8.14.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
     - GoogleUtilities/MethodSwizzler (~> 7.7)
     - GoogleUtilities/Network (~> 7.7)
@@ -281,9 +281,9 @@ PODS:
     - Flutter
   - PromisesObjC (2.0.0)
   - Protobuf (3.19.4)
-  - SDWebImage (5.12.3):
-    - SDWebImage/Core (= 5.12.3)
-  - SDWebImage/Core (5.12.3)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
   - sqflite (0.0.2):
     - Flutter
     - FMDB (>= 2.7.5)
@@ -375,16 +375,16 @@ SPEC CHECKSUMS:
   DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   file_picker: 0942330d6e07bdb3a4f438b2e604d0dc73e2d2bc
-  Firebase: 580d09e8edafc3073ebf09c03fd42e4d80d35fe9
-  FirebaseAnalytics: bd10d7706ba8d6e01ea2816f8fe9e9b881cb0918
-  FirebaseCore: 8138de860a90ca7eec5e324da5788fb0ebf1d93c
-  FirebaseCoreDiagnostics: 3b40dfadef5b90433a60ae01f01e90fe87aa76aa
-  FirebaseInstallations: 25764cf322e77f99449395870a65b2bef88e1545
+  Firebase: 7e8fe528c161b9271d365217a74c16aaf834578e
+  FirebaseAnalytics: 2fc3876e2eb347673ad2f35e249ae7b15d6c88f5
+  FirebaseCore: b84a44ee7ba999e0f9f76d198a9c7f60a797b848
+  FirebaseCoreDiagnostics: fd0c8490f34287229c1d6c103d3a55f81ec85712
+  FirebaseInstallations: 7d1d967a307c12f1aadd76844fc321cef699b1ce
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   flutter_pdfview: 9f7bcb9753a88822111316277365802bed81985a
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   google_ml_kit: a85eefb9ea6156b27ee2fba2b71e461e7b26a4f6
-  GoogleAppMeasurement: ae033c3aad67e68294369373056b4d74cc8ae0d6
+  GoogleAppMeasurement: 71156240babd3cc6ced03e0d54816f01a880c730
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 85ffdc9641d05311c76dbba5bbf93059087be12f
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -417,7 +417,7 @@ SPEC CHECKSUMS:
   permission_handler: 0b073e1872e3456cddc1bc2606fd07b87c52b59f
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
-  SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   sqflite: e5e297d29c9925a0f4d36de868ee928c74d76332
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
