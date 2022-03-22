@@ -96,7 +96,7 @@ class HeadTrackingController extends GetxController {
         if (face.headEulerAngleZ!.abs() >= turnPageAngle) {
           turnPage.value = secondGesture(face);
         }
-        //print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
+        print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
       }
     });
   }
