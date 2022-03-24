@@ -48,7 +48,12 @@ class HomePage extends GetView<FilesControler> {
               ListTile(
                 leading: Icon(Icons.help),
                 title: Text('Tutorial'),
-                onTap: () => Get.to(() => const Tutorial())
+                onTap: () {
+                  Get.lazyPut(
+                    () => PDFController(path: "assets/Tutorial.pdf"),
+                    tag: "Tutorial");
+                  Get.to(() => pdfPage(path: "assets/Tutorial.pdf", location: 'assets'));
+                }
               )
             ],
           ),

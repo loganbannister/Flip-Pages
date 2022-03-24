@@ -77,6 +77,7 @@ flutter:
     - assets/Canon_in_D.pdf
     - assets/Fr_Elise.pdf
     - assets/Carol_of_the_Bells.pdf
+    - assets/Tutorial.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
