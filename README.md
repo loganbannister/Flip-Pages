@@ -16,17 +16,25 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+- Traditionally, sheet music is in the form of a multi-page document. When a musician reaches the final bar of a page, they need to either stop playing and turn to the next page or depend on someone else to turn the page for them when appropriate. Both methods can be very distracting; Such a distraction can make practice as well as performance more difficult due to the possible break in musical continuity or concentration. Dr. Samson Cheung who has picked up the piano after 30 years says that turning the pages is “Highly distractive” for musicians. A system is needed to mitigate a musician’s distraction of turning the pages of a musical score. The app will be designed with beginners in mind as expert musicians may not use sheet music.
+- The objective of this project is to design an automatic page turner to help musicians turn the page of their scores while they are playing while minimizing the distraction to the musician. During the time playing the musical instruments, turning pages is either to have the musician turning it by hand or foot pedal or an assistant doing the page turning. The goal of our project is to use an interface that relies on the front camera of the device to detect specific page turning gestures such as head turning or eye gaze. We will also focus on developing an app for the phone or tablet with some specific software during the process to improve the accuracy, reliability, and security of the design. 
+- For centuries, paper sheet music has been the primary way musicians have been able to learn and perform songs. Typically, musicians will turn the pages of the sheet music by hand or have a separate person doing the page-turning. However, this approach to turning sheet music pages can be a cause of distraction for musicians.
+
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- [Flutter SDK](https://flutter.dev/) - version 2.5.3
+- [get](https://pub.dev/packages/get) - version 4.6.1
+- [file_picker](https://pub.dev/packages/file_picker) - version 4.3.3
+- [flutter_pdfview](https://pub.dev/packages/flutter_pdfview) - version 1.2.1
+- [path](https://pub.dev/packages/path) - version 1.8.0
+- [permission_handler](https://pub.dev/packages/permission_handler) - version 8.3.0
+- [flutter_cached_pdfview](https://pub.dev/packages/flutter_cached_pdfview) - version 0.4.1
+- [path_provider_ex](https://pub.dev/packages/path_provider_ex) - version 1.0.1
+- [flutter_file_manager](https://pub.dev/packages/flutter_file_manager) - version 0.2.0
+- [camera](https://pub.dev/packages/camera) - version 0.9.4+11
+- [google_ml_kit](https://pub.dev/packages/google_ml_kit) - version 0.7.2
 
 
 ## Features
@@ -65,21 +73,17 @@ Room for improvement:
 - Improvement to be done 1
 - Improvement to be done 2
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This idea for this project was provided by our sponsors Dr. Samson Cheung and Dr. Mike Johnson.
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
+Created by:
+- [Logan Bannister](https://github.com/loganbannister)
+- [Ryan Bezold](https://github.com/Hydraux)
+- [Cooper Moore](https://github.com/cjmo253)
+- [Tony Ramirez](https://github.com/tonypacheco223)
+- [Feng Ye](https://github.com/plantduck)
 
 <!-- Optional -->
 <!-- ## License -->
