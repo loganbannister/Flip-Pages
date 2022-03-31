@@ -8,6 +8,8 @@
 .buildlog/
 .history
 .svn/
+.packages
+pubspec.lock
 
 # IntelliJ related
 *.iml
@@ -24,7 +26,7 @@
 **/doc/api/
 **/ios/Flutter/.last_build_id
 
-.dart_tool
+.dart_tool/
 .pub-cache/
 .pub/
 /build/
