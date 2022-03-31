@@ -16,8 +16,7 @@ class pdfPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HeadTrackingController headTrackingController = Get.find();
-    final PDFController controller =
-        Get.find<PDFController>(tag: basenameWithoutExtension(path));
+    final PDFController controller = Get.find<PDFController>(tag: basenameWithoutExtension(path));
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
@@ -26,18 +25,22 @@ class pdfPage extends StatelessWidget {
           actions: [
             Obx(() {
               return IconButton(
-                icon: headTrackingController.streamRunning.value
-                    ? const Icon(Icons.pause)
-                    : const Icon(Icons.play_arrow),
+                icon:
+                    headTrackingController.streamRunning.value ? const Icon(Icons.pause) : const Icon(Icons.play_arrow),
                 onPressed: () => headTrackingController.toggleStream(),
               );
             }),
           ]),
       body: Obx(() {
-        if (headTrackingController.turnPage.value) {
-          controller.turnPage();
-          headTrackingController.turnPage.value == false;
-        }
+        if (headTrackingController.turnPage.value) {}
+        Future.delayed(headTrackingController.duration, () {
+          if (headTrackingController.turnPage.value) {
+            controller.turnPage();
+          }
+          if (headTrackingController.previousPage.value) {
+            controller.previousPage();
+          }
+        });
         return controller.path == 'home'
             ? const Center(
                 child: Text('Select a song from the drawer'),
@@ -46,8 +49,7 @@ class pdfPage extends StatelessWidget {
                 swipeHorizontal: true,
                 onViewCreated: (viewController) {
                   controller.viewController = viewController;
-                  controller.pdfViewController
-                      .complete(controller.viewController);
+                  controller.pdfViewController.complete(controller.viewController);
                 }).fromAsset(controller.path);
       }),
     );

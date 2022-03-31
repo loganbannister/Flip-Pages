@@ -9,8 +9,8 @@ import 'package:google_ml_kit/google_ml_kit.dart';
 
 class HeadTrackingController extends GetxController {
   //Timer for second turn page gesture
-  late Stopwatch stopwatch;
-  Duration duration = const Duration(seconds: 3);
+  Stopwatch stopwatch = Stopwatch()..start();
+  Duration duration = const Duration(milliseconds: 10);
 
   //list of cameras on device
   List<CameraDescription>? cameras;
@@ -25,10 +25,14 @@ class HeadTrackingController extends GetxController {
   RxDouble headRotation = RxDouble(0);
 
   //TODO: Determine by testing which angle to turn the page at
-  double turnPageAngle = 70;
+  double turnPageAngle = -70;
+  double previousPageAngle = -90;
+  double positiveBound = -60;
+  double negativeBound = -100;
 
   // true if turn page condition is met
   RxBool turnPage = RxBool(false);
+  RxBool previousPage = RxBool(false);
 
   @override
   void onInit() async {
@@ -52,16 +56,13 @@ class HeadTrackingController extends GetxController {
       }
       final bytes = allBytes.done().buffer.asUint8List();
 
-      final Size imageSize =
-          Size(cameraImage.width.toDouble(), cameraImage.height.toDouble());
+      final Size imageSize = Size(cameraImage.width.toDouble(), cameraImage.height.toDouble());
 
       final InputImageRotation imageRotation =
-          InputImageRotationMethods.fromRawValue(0) ??
-              InputImageRotation.Rotation_0deg;
+          InputImageRotationMethods.fromRawValue(0) ?? InputImageRotation.Rotation_0deg;
 
       final InputImageFormat inputImageFormat =
-          InputImageFormatMethods.fromRawValue(cameraImage.format.raw) ??
-              InputImageFormat.NV21;
+          InputImageFormatMethods.fromRawValue(cameraImage.format.raw) ?? InputImageFormat.NV21;
 
       final planeData = cameraImage.planes.map(
         (Plane plane) {
@@ -80,22 +81,20 @@ class HeadTrackingController extends GetxController {
         planeData: planeData,
       );
 
-      final inputImage =
-          InputImage.fromBytes(bytes: bytes, inputImageData: inputImageData);
+      final inputImage = InputImage.fromBytes(bytes: bytes, inputImageData: inputImageData);
 
       // Detects faces in camera view
       final faceDetector = GoogleMlKit.vision.faceDetector(
-          const FaceDetectorOptions(
-              enableClassification: false,
-              enableLandmarks: false,
-              enableTracking: true));
+          const FaceDetectorOptions(enableClassification: false, enableLandmarks: false, enableTracking: true));
       final List<Face> faces = await faceDetector.processImage(inputImage);
 
       // Assumes only one face and prints tilt angle
       for (Face face in faces) {
-        if (face.headEulerAngleZ!.abs() >= turnPageAngle) {
-          turnPage.value = secondGesture(face);
+        if (face.headEulerAngleZ! >= negativeBound && face.headEulerAngleZ! <= positiveBound) {
+          detectGesture(face);
         }
+
+        //await Future.delayed(duration, () {});
         print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
       }
     });
@@ -114,14 +113,14 @@ class HeadTrackingController extends GetxController {
     }
   }
 
-  bool secondGesture(Face face) {
-    stopwatch = Stopwatch()..start();
-    while (stopwatch.elapsed <= duration) {
-      if (face.headEulerAngleZ! >= turnPageAngle) {
-        print('true');
-        return true;
-      }
+  void detectGesture(Face face) async {
+    if (face.headEulerAngleZ! > turnPageAngle) {
+      turnPage.value = true;
+    } else if (face.headEulerAngleZ! < previousPageAngle) {
+      previousPage.value = true;
+    } else {
+      turnPage.value = false;
+      previousPage.value = false;
     }
-    return false;
   }
 }
