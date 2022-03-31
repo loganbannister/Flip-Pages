@@ -63,7 +63,7 @@ Provide various use cases and code examples here.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+This project is currently in progress.
 
 
 ## Room for Improvement
