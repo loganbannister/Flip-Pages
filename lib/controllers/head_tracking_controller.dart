@@ -125,13 +125,24 @@ class HeadTrackingController extends GetxController {
   }
 
   void detectGesture(Face face) async {
-    if (face.headEulerAngleZ! > turnPageAngle) {
-      turnPage.value = true;
-    } else if (face.headEulerAngleZ! < previousPageAngle) {
-      previousPage.value = true;
+    if (Platform.isIOS) {
+      if (face.headEulerAngleZ! < turnPageAngle) {
+        turnPage.value = true;
+      } else if (face.headEulerAngleZ! > previousPageAngle) {
+        previousPage.value = true;
+      } else {
+        turnPage.value = false;
+        previousPage.value = false;
+      }
     } else {
-      turnPage.value = false;
-      previousPage.value = false;
+      if (face.headEulerAngleZ! > turnPageAngle) {
+        turnPage.value = true;
+      } else if (face.headEulerAngleZ! < previousPageAngle) {
+        previousPage.value = true;
+      } else {
+        turnPage.value = false;
+        previousPage.value = false;
+      }
     }
   }
 }
