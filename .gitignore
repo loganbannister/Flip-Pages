@@ -11,6 +11,7 @@
 .packages
 pubspec.lock
 .flutter-plugins-dependencies
+.flutter-plugins
 
 # IntelliJ related
 *.iml
