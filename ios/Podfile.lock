@@ -3,14 +3,14 @@ PODS:
     - Flutter
   - camera (0.0.1):
     - Flutter
-  - DKImagePickerController/Core (4.3.2):
+  - DKImagePickerController/Core (4.3.3):
     - DKImagePickerController/ImageDataManager
     - DKImagePickerController/Resource
-  - DKImagePickerController/ImageDataManager (4.3.2)
-  - DKImagePickerController/PhotoGallery (4.3.2):
+  - DKImagePickerController/ImageDataManager (4.3.3)
+  - DKImagePickerController/PhotoGallery (4.3.3):
     - DKImagePickerController/Core
     - DKPhotoGallery
-  - DKImagePickerController/Resource (4.3.2)
+  - DKImagePickerController/Resource (4.3.3)
   - DKPhotoGallery (0.0.17):
     - DKPhotoGallery/Core (= 0.0.17)
     - DKPhotoGallery/Model (= 0.0.17)
@@ -280,7 +280,7 @@ PODS:
   - "permission_handler (5.1.0+2)":
     - Flutter
   - PromisesObjC (2.0.0)
-  - Protobuf (3.19.4)
+  - Protobuf (3.20.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -372,7 +372,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   advance_pdf_viewer: e11c3f1eed0a02ce67f045e2ebe095acbcbe82a8
   camera: 6c52e063c79061bb13f0b081284e4650327c9bf1
-  DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
+  DKImagePickerController: 72fd378f244cef3d27288e0aebf217a4467e4012
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   file_picker: 0942330d6e07bdb3a4f438b2e604d0dc73e2d2bc
   Firebase: 7e8fe528c161b9271d365217a74c16aaf834578e
@@ -416,7 +416,7 @@ SPEC CHECKSUMS:
   path_provider_ios: 87133ea67cd788a576f21577e5056c15e59abeca
   permission_handler: 0b073e1872e3456cddc1bc2606fd07b87c52b59f
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
+  Protobuf: 66e2f3b26a35e4cc379831f4ced538274ee4b923
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   sqflite: e5e297d29c9925a0f4d36de868ee928c74d76332
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
