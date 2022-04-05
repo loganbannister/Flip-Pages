@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -27,8 +26,8 @@ class HeadTrackingController extends GetxController {
   //TODO: Determine by testing which angle to turn the page at
   double turnPageAngle = -70;
   double previousPageAngle = -90;
-  double positiveBound = -60;
-  double negativeBound = -100;
+  // double positiveBound = -60;
+  // double negativeBound = -100;
 
   // true if turn page condition is met
   RxBool turnPage = RxBool(false);
@@ -38,7 +37,11 @@ class HeadTrackingController extends GetxController {
   void onInit() async {
     await getPermission(); //check if permissions are accepted
     initCamera(); //initialize camera
-    if (Platform.isIOS) turnPageAngle = 30;
+    if (Platform.isIOS) {
+      turnPageAngle = -30;
+      previousPageAngle = 30;
+    }
+
     super.onInit();
   }
 
@@ -56,13 +59,16 @@ class HeadTrackingController extends GetxController {
       }
       final bytes = allBytes.done().buffer.asUint8List();
 
-      final Size imageSize = Size(cameraImage.width.toDouble(), cameraImage.height.toDouble());
+      final Size imageSize =
+          Size(cameraImage.width.toDouble(), cameraImage.height.toDouble());
 
       final InputImageRotation imageRotation =
-          InputImageRotationMethods.fromRawValue(0) ?? InputImageRotation.Rotation_0deg;
+          InputImageRotationMethods.fromRawValue(0) ??
+              InputImageRotation.Rotation_0deg;
 
       final InputImageFormat inputImageFormat =
-          InputImageFormatMethods.fromRawValue(cameraImage.format.raw) ?? InputImageFormat.NV21;
+          InputImageFormatMethods.fromRawValue(cameraImage.format.raw) ??
+              InputImageFormat.NV21;
 
       final planeData = cameraImage.planes.map(
         (Plane plane) {
@@ -81,18 +87,23 @@ class HeadTrackingController extends GetxController {
         planeData: planeData,
       );
 
-      final inputImage = InputImage.fromBytes(bytes: bytes, inputImageData: inputImageData);
+      final inputImage =
+          InputImage.fromBytes(bytes: bytes, inputImageData: inputImageData);
 
       // Detects faces in camera view
       final faceDetector = GoogleMlKit.vision.faceDetector(
-          const FaceDetectorOptions(enableClassification: false, enableLandmarks: false, enableTracking: true));
+          const FaceDetectorOptions(
+              enableClassification: false,
+              enableLandmarks: false,
+              enableTracking: true));
       final List<Face> faces = await faceDetector.processImage(inputImage);
 
       // Assumes only one face and prints tilt angle
       for (Face face in faces) {
-        if (face.headEulerAngleZ! >= negativeBound && face.headEulerAngleZ! <= positiveBound) {
-          detectGesture(face);
-        }
+        // if (face.headEulerAngleZ! >= negativeBound &&
+        //     face.headEulerAngleZ! <= positiveBound) {
+        detectGesture(face);
+        // }
 
         //await Future.delayed(duration, () {});
         print('face ${face.headEulerAngleZ!.toStringAsFixed(0)}');
