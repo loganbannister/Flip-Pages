@@ -55,8 +55,7 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+To add a new PDF to the music library the following steps need to be 
 
 `write-your-code-here`
 
