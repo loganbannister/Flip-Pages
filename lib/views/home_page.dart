@@ -15,45 +15,10 @@ class HomePage extends GetView<FilesControler> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              Container(
-                color: Colors.deepPurpleAccent,
-                child: const DrawerHeader(
-                    margin: EdgeInsets.all(0),
-                    child: Center(
-                      child: Text(
-                        'Flip Pages',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                        ),
-                      ),
-                    )),
-              ),
-              const ListTile(
-                leading: Icon(Icons.music_note),
-                title: Text('Music'),
-              ),
-              const ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
-              ),
-              ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Eye Tracking Test'),
-                onTap: () => Get.to(() => const HeadTracking()),
-              ),
-              ListTile(
-                leading: Icon(Icons.help),
-                title: Text('Tutorial'),
-                onTap: () => Get.to(() => const Tutorial())
-              )
-            ],
-          ),
-        ),
         appBar: AppBar(
+          leading: IconButton(
+              onPressed: () => Get.to(() => const Tutorial()),
+              icon: const Icon(Icons.help_outline_outlined)),
           title: const Text('Music'),
           centerTitle: true,
           backgroundColor: Colors.deepPurpleAccent,
@@ -83,7 +48,8 @@ class HomePage extends GetView<FilesControler> {
             onTap: () {
               final String newPath = controller.filePaths[index];
               controller.currentPath.value = newPath;
-              Get.lazyPut(() => PDFController(path: controller.currentPath.value),
+              Get.lazyPut(
+                  () => PDFController(path: controller.currentPath.value),
                   tag: basenameWithoutExtension(controller.currentPath.value));
               Get.to(() => pdfPage(path: newPath, location: 'assets'));
             },
