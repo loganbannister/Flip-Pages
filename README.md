@@ -1,6 +1,10 @@
 # Flip Pages
 > The purpose of this project is to develop an app capable of turning the pages of a musician’s score subtly. The automatic page turner will allow the user to practice his/her music without being distracted by manually flipping the page. This report contains an overview of the project, all of the team’s requirements, impacts of the design, functional decomposition, information about testing of the design, and a bill of materials. The team’s primary focus is on constructing an easy-to-use app that consistently turns the page at the appropriate time. 
 
+<p align="center">
+  <img src="roundedLogo.png" alt="drawing" width="300"/>
+</p>
+
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
