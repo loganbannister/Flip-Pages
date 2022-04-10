@@ -54,9 +54,7 @@ The current build of Flip Pages allows users to turn pages of musical scores by 
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+To use this project you will need to [install Flutter](https://docs.flutter.dev/get-started/install). For running on iOS you will also need to [install Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12). Once you have downloaded the project, you will need to run `flutter pub get`. For iOS, you will also need to run `pod install` within the ios directory in Terminal and follow the [steps to deploy an iOS Flutter app](https://docs.flutter.dev/deployment/ios).
 
 
 ## Usage
