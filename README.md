@@ -38,9 +38,7 @@
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
+The current build of Flip Pages allows users to turn pages of musical scores by tilting their head to the right.
 
 
 ## Screenshots
@@ -55,9 +53,10 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Usage
-To add a new PDF to the music library the following steps need to be 
-
-`write-your-code-here`
+To add a new PDF to the music library the following steps need to be done, where <em>pdf_name</em> is the name of the PDF file.
+- Add your PDF to the asssets folder
+- Within the pubspec.yaml file add the following to the assets section: `- assets/pdf_name`
+- In the loadFiles() function in files_controller.dart add the following line: `filePaths.add('assets/pdf_name');`
 
 
 ## Project Status
@@ -65,11 +64,9 @@ This project is currently in progress.
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+If we had more time to work on this project, we hoped to be able to add audio processing as a method to turn pages. This is something that we had been working on, but couldn't get implemented within the application before the deadline. The links below will take you to other repositories containing the code we have done for audio processing:
+- [Image proccessing](https://github.com/cjmo253/Capstone_Score_Processing/tree/master) for musical scores that provides a MIDI file of the detected noted.
+- Audio Procedding
 
 ## Acknowledgements
 - This idea for this project was provided by our sponsors Dr. Samson Cheung and Dr. Mike Johnson.
