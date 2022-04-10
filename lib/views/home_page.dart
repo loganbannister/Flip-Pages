@@ -15,6 +15,7 @@ class HomePage extends GetView<FilesControler> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        /*
         drawer: Drawer(
           child: ListView(
             children: [
@@ -58,7 +59,16 @@ class HomePage extends GetView<FilesControler> {
             ],
           ),
         ),
+        */
         appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                  Get.lazyPut(
+                    () => PDFController(path: "assets/Tutorial.pdf"),
+                    tag: "Tutorial");
+                  Get.to(() => pdfPage(path: "assets/Tutorial.pdf", location: 'assets'));
+              },
+              icon: const Icon(Icons.help_outline_outlined)),
           title: const Text('Music'),
           centerTitle: true,
           backgroundColor: Colors.deepPurpleAccent,
