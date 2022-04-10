@@ -1,8 +1,8 @@
 # Flip Pages
-> The purpose of this project is to develop an app capable of turning the pages of a musician’s score subtly. The automatic page turner will allow the user to practice his/her music without being distracted by manually flipping the page. This report contains an overview of the project, all of the team’s requirements, impacts of the design, functional decomposition, information about testing of the design, and a bill of materials. The team’s primary focus is on constructing an easy-to-use app that consistently turns the page at the appropriate time. 
+> The purpose of this project is to develop an app capable of turning the pages of a musician’s score subtly. The automatic page turner will allow the user to practice his/her music without being distracted by manually flipping the page. The team’s primary focus is on constructing an easy-to-use app that consistently turns the page at the appropriate time. 
 
 <p align="center">
-  <img src="roundedLogo.png" alt="drawing" width="300"/>
+  <img src="roundedLogo.png" alt="app icon" width="300"/>
 </p>
 
 ## Table of Contents
@@ -46,14 +46,15 @@ The current build of Flip Pages allows users to turn pages of musical scores by 
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+<p align="center">
+  <img src="/screenshots/home_page.PNG" alt="home page" width="300"/>
+  <img src="/screenshots/tutorial.PNG" alt="tutorial" width="300"/>
+  <img src="/screenshots/open_score.PNG" alt="open score" width="300"/>
+</p>
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+To use this project you will need to [install Flutter](https://docs.flutter.dev/get-started/install). For running on iOS you will also need to [install Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12). Once you have downloaded the project, you will need to run `flutter pub get`. For iOS, you will also need to run `pod install` within the ios directory in Terminal and follow the [steps to deploy an iOS Flutter app](https://docs.flutter.dev/deployment/ios).
 
 
 ## Usage
