@@ -71,7 +71,7 @@ This project is currently in progress.
 ## Room for Improvement
 If we had more time to work on this project, we hoped to be able to add audio processing as a method to turn pages. This is something that we had been working on, but couldn't get implemented within the application before the deadline. The links below will take you to other repositories containing the code we have done for audio processing:
 - [Image proccessing](https://github.com/cjmo253/Capstone_Score_Processing/tree/master) for musical scores that provides a MIDI file of the detected noted.
-- Audio Procedding
+- Audio Processing
 
 ## Acknowledgements
 - This idea for this project was provided by our sponsors Dr. Samson Cheung and Dr. Mike Johnson.
