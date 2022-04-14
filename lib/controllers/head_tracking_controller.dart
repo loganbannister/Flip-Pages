@@ -145,4 +145,8 @@ class HeadTrackingController extends GetxController {
       }
     }
   }
+
+  void calibrate() {
+    
+  }
 }

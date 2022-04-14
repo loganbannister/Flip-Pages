@@ -16,7 +16,8 @@ class pdfPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HeadTrackingController headTrackingController = Get.find();
-    final PDFController controller = Get.find<PDFController>(tag: basenameWithoutExtension(path));
+    final PDFController controller =
+        Get.find<PDFController>(tag: basenameWithoutExtension(path));
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
@@ -25,13 +26,15 @@ class pdfPage extends StatelessWidget {
           actions: [
             Obx(() {
               return IconButton(
-                icon:
-                    headTrackingController.streamRunning.value ? const Icon(Icons.pause) : const Icon(Icons.play_arrow),
+                icon: headTrackingController.streamRunning.value
+                    ? const Icon(Icons.pause)
+                    : const Icon(Icons.play_arrow),
                 onPressed: () => headTrackingController.toggleStream(),
               );
             }),
           ]),
       body: Obx(() {
+        if (headTrackingController.turnPage.value) {}
         if (headTrackingController.turnPage.value) {}
         Future.delayed(headTrackingController.duration, () {
           if (headTrackingController.turnPage.value) {
@@ -49,7 +52,8 @@ class pdfPage extends StatelessWidget {
                 swipeHorizontal: true,
                 onViewCreated: (viewController) {
                   controller.viewController = viewController;
-                  controller.pdfViewController.complete(controller.viewController);
+                  controller.pdfViewController
+                      .complete(controller.viewController);
                 }).fromAsset(controller.path);
       }),
     );
