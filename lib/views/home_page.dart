@@ -1,7 +1,6 @@
 import 'package:flip_pages/controllers/files_controller.dart';
 import 'package:flip_pages/controllers/pdf_controller.dart';
 import 'package:flip_pages/views/head_tracking.dart';
-import 'package:flip_pages/views/tutorial.dart';
 import 'package:flip_pages/widgets/pdf_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
