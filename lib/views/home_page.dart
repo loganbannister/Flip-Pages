@@ -38,13 +38,8 @@ class HomePage extends GetView<FilesControler> {
               ),
               ListTile(
                 leading: const Icon(Icons.settings),
-                title: const Text('Settings'),
+                title: const Text('Calibration'),
                 onTap: () => Get.to(() => const Calibration()),
-              ),
-              ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Eye Tracking Test'),
-                onTap: () => Get.to(() => const HeadTracking()),
               ),
               ListTile(
                   leading: const Icon(Icons.help),
