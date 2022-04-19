@@ -1,7 +1,7 @@
 import 'package:flip_pages/controllers/files_controller.dart';
 import 'package:flip_pages/controllers/pdf_controller.dart';
+import 'package:flip_pages/views/calibration.dart';
 import 'package:flip_pages/views/head_tracking.dart';
-import 'package:flip_pages/views/tutorial.dart';
 import 'package:flip_pages/widgets/pdf_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
@@ -15,7 +15,6 @@ class HomePage extends GetView<FilesControler> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        /*
         drawer: Drawer(
           child: ListView(
             children: [
@@ -37,9 +36,10 @@ class HomePage extends GetView<FilesControler> {
                 leading: Icon(Icons.music_note),
                 title: Text('Music'),
               ),
-              const ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
+              ListTile(
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                onTap: () => Get.to(() => const Calibration()),
               ),
               ListTile(
                 leading: const Icon(Icons.camera),
@@ -47,28 +47,27 @@ class HomePage extends GetView<FilesControler> {
                 onTap: () => Get.to(() => const HeadTracking()),
               ),
               ListTile(
-                leading: Icon(Icons.help),
-                title: Text('Tutorial'),
-                onTap: () {
-                  Get.lazyPut(
-                    () => PDFController(path: "assets/Tutorial.pdf"),
-                    tag: "Tutorial");
-                  Get.to(() => pdfPage(path: "assets/Tutorial.pdf", location: 'assets'));
-                }
-              )
+                  leading: const Icon(Icons.help),
+                  title: const Text('Tutorial'),
+                  onTap: () {
+                    Get.lazyPut(
+                        () => PDFController(path: "assets/Tutorial.pdf"),
+                        tag: "Tutorial");
+                    Get.to(() => const pdfPage(
+                        path: "assets/Tutorial.pdf", location: 'assets'));
+                  })
             ],
           ),
         ),
-        */
         appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                  Get.lazyPut(
-                    () => PDFController(path: "assets/Tutorial.pdf"),
-                    tag: "Tutorial");
-                  Get.to(() => pdfPage(path: "assets/Tutorial.pdf", location: 'assets'));
-              },
-              icon: const Icon(Icons.help_outline_outlined)),
+          // leading: IconButton(
+          //     onPressed: () {
+          //       Get.lazyPut(() => PDFController(path: "assets/Tutorial.pdf"),
+          //           tag: "Tutorial");
+          //       Get.to(() =>
+          //           const pdfPage(path: "assets/Tutorial.pdf", location: 'assets'));
+          //     },
+          //     icon: const Icon(Icons.help_outline_outlined)),
           title: const Text('Music'),
           centerTitle: true,
           backgroundColor: Colors.deepPurpleAccent,

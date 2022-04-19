@@ -146,7 +146,30 @@ class HeadTrackingController extends GetxController {
     }
   }
 
-  void calibrate() {
-    
+  void calibrate(String direction) async {
+    XFile Xfile = await camera!.takePicture();
+    File file = File(Xfile.path);
+    InputImage image = InputImage.fromFile(file);
+    final faceDectector =
+        GoogleMlKit.vision.faceDetector(const FaceDetectorOptions(
+      enableClassification: false,
+      enableLandmarks: false,
+      enableTracking: true,
+    ));
+    final List<Face> faces = await faceDectector.processImage(image);
+    double? angle = faces[0].headEulerAngleZ;
+
+    if (Platform.isAndroid) {
+      angle = angle! - 90;
+    }
+
+    print('New angle: ' + angle.toString());
+    if (angle != null) {
+      if (direction == 'forward') {
+        turnPageAngle = angle;
+      } else {
+        previousPageAngle = angle;
+      }
+    }
   }
 }

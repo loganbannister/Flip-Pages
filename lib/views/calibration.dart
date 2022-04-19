@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flip_pages/controllers/head_tracking_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
 
 class Calibration extends GetView<HeadTrackingController> {
@@ -14,8 +15,10 @@ class Calibration extends GetView<HeadTrackingController> {
         title: const Text('Head Tracking Calibration'),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () => controller.toggleStream(),
-          icon: const Icon(Icons.play_arrow),)
+          IconButton(
+            onPressed: () => controller.toggleStream(),
+            icon: const Icon(Icons.play_arrow),
+          )
         ],
       ),
       body: ListView(
@@ -45,12 +48,28 @@ class Calibration extends GetView<HeadTrackingController> {
           })
         ],
       ),
-      floatingActionButton: Obx(() {
-        return FloatingActionButton(
-          onPressed: () => controller.calibrate(),
-          child: const Icon(Icons.adjust),
-        );
-      }),
+      floatingActionButton: ButtonBar(
+        alignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+            onPressed: () {
+              controller.calibrate('backward');
+              Get.snackbar('Calibrated', 'Previous Page Gesutre Calibrated');
+            },
+            child: const Icon(Icons.arrow_back),
+          ),
+          const Spacer(),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+            onPressed: () {
+              controller.calibrate('forward');
+              Get.snackbar('Calibrated', 'Next Page Gesture Calibrated');
+            },
+            child: const Icon(Icons.arrow_forward),
+          ),
+        ],
+      ),
     );
   }
 }
