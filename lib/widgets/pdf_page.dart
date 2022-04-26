@@ -35,7 +35,7 @@ class pdfPage extends StatelessWidget {
           ]),
       body: Obx(() {
         if (headTrackingController.turnPage.value) {}
-        if (headTrackingController.turnPage.value) {}
+        if (headTrackingController.previousPage.value) {}
         Future.delayed(headTrackingController.duration, () {
           if (headTrackingController.turnPage.value) {
             controller.turnPage();

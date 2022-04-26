@@ -45,28 +45,31 @@ class Calibration extends GetView<HeadTrackingController> {
                       color: Colors.red,
                     ),
                   );
-          })
-        ],
-      ),
-      floatingActionButton: ButtonBar(
-        alignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
-            onPressed: () {
-              controller.calibrate('backward');
-              Get.snackbar('Calibrated', 'Previous Page Gesutre Calibrated');
-            },
-            child: const Icon(Icons.arrow_back),
-          ),
-          const Spacer(),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
-            onPressed: () {
-              controller.calibrate('forward');
-              Get.snackbar('Calibrated', 'Next Page Gesture Calibrated');
-            },
-            child: const Icon(Icons.arrow_forward),
+          }),
+          ButtonBar(
+            alignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                style:
+                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                onPressed: () {
+                  controller.calibrate('backward');
+                  Get.snackbar(
+                      'Calibrated', 'Previous Page Gesutre Calibrated');
+                },
+                child: const Icon(Icons.arrow_back),
+              ),
+              const Spacer(),
+              ElevatedButton(
+                style:
+                    ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                onPressed: () {
+                  controller.calibrate('forward');
+                  Get.snackbar('Calibrated', 'Next Page Gesture Calibrated');
+                },
+                child: const Icon(Icons.arrow_forward),
+              ),
+            ],
           ),
         ],
       ),
