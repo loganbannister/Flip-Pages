@@ -65,7 +65,7 @@ To add a new PDF to the music library the following steps need to be done, where
 
 
 ## Project Status
-This project is currently in progress.
+This project is completed.
 
 
 ## Room for Improvement
